@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeAdmin">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/primaryColor"
+        tools:ignore="Orientation" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_below="@id/top"
+        android:layout_marginTop="-86dp"
+        android:src="@drawable/ic_wave"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor"
+        tools:ignore="Orientation" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_above="@id/bottom"
+        android:layout_marginBottom="-26dp"
+        android:src="@drawable/ic_wave_1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/home_screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Admin Panel"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_screen_title"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:columnCount="2"
+        android:padding="5dp"
+        android:rowCount="3">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/blood_drop"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/receive_blood"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_blood_bank_24"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Bank"
+                    android:textAllCaps="false"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_hospital"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/fonta"
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_person_profile"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_add_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_person_add_72"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/home_cardview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Admins"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</RelativeLayout>

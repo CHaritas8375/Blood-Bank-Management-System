@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/primaryColor"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_image"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/text_view_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/profile_image"
+            android:includeFontPadding="false"
+            android:text="Full Name"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_full_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/profile_image"
+            android:includeFontPadding="false"
+            android:text="Basic_user"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-84dp"
+        android:padding="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#fff"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/donate_blood" />
+
+                <TextView
+                    android:id="@+id/donation_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="5"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/donation_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/donation_count"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="Donations"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#fff"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/receive_blood" />
+
+                <TextView
+                    android:id="@+id/received_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="0"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/received_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/received_count"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="Accept"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#fff"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_timer" />
+
+                <TextView
+                    android:id="@+id/days_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="55"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/days_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/days_count"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="true"
+                    android:text="Days Left"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            android:enabled="false"
+            android:hint="Full Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:background="@drawable/edittext_rectbox"
+                android:drawablePadding="10dp"
+                android:text="Haritas" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            android:enabled="false"
+            android:hint="E-Mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rectbox"
+                android:drawablePadding="10dp"
+                android:inputType="textEmailAddress"
+                android:text="shadowblack@gamil.com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:enabled="false"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:prefixText="+91"
+            app:startIconDrawable="@drawable/ic_baseline_contact_page_24"
+            android:hint="Contact Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:background="@drawable/edittext_rectbox"
+                android:drawablePadding="10dp"
+                android:text="8745874589" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_button"
+            android:text="Edit Profile"
+            android:elevation="20dp"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_sign_out"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:elevation="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/box_button"
+            android:onClick="logout"
+            android:text="Sign Out"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

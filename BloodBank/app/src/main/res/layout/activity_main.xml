@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="0dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/blood_bank_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/box_button"
+            android:drawableRight="@drawable/ic_baseline_login_36"
+            android:padding="10dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/registration_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/box_button"
+            android:drawableRight="@drawable/ic_baseline_person_add_alt_1_36"
+            android:padding="10dp"
+            android:text="Sign UP"
+            android:textAllCaps="false"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+</LinearLayout>
